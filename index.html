@@ -3,16 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Primeiro Site</title>
+  <title>Meu Projeto Moderno</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="card">
-    <h1>Bem-vindo ao Meu Site!</h1>
-    <p>Clique no botão abaixo para ver o JavaScript em ação.</p>
-    <button id="meuBotao">Clique aqui</button>
-    <p id="mensagem"></p>
+  <div class="background-blur"></div>
+
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <span class="icon">🚀</span>
+        <h2>DevApp</h2>
+      </div>
+      <button id="themeToggle" class="btn-theme" aria-label="Alternar Tema">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </header>
+
+    <main class="card">
+      <div class="card-header">
+        <h1>Painel Interativo</h1>
+        <p>Gerencie suas métricas em tempo real e teste interações modernas em JS.</p>
+      </div>
+
+      <div class="metrics">
+        <div class="metric-box">
+          <span class="metric-title">Cliques Totais</span>
+          <span id="clickCount" class="metric-value">0</span>
+        </div>
+        <div class="metric-box">
+          <span class="metric-title">Nível de Energia</span>
+          <span id="energyValue" class="metric-value">100%</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="actionBtn" class="btn btn-primary">Interagir</button>
+        <button id="resetBtn" class="btn btn-secondary">Reiniciar</button>
+      </div>
+
+      <p id="feedbackMessage" class="feedback"></p>
+    </main>
   </div>
 
   <script src="script.js"></script>
